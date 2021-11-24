@@ -119,20 +119,14 @@ def criar_cabo_mao(wb, nome_planilha, linha, quant_dados):
                 ws.merge_cells(
                     f'{char}{linha_indice}:{char}{str(int(linha_indice)+1)}')
                 for aux1 in range(0, 2):
-                    ws[f'{char}{str(int(linha_indice)+aux1)}'].border = Border(
-                        top=borda_fina, left=borda_fina, right=borda_fina, bottom=borda_fina)
-                    ws[f'{char}{str(int(linha_indice)+aux1)}'].alignment = Alignment(
-                        horizontal='center', vertical='center', wrapText=True)
-                    ws[f'{char}{str(int(linha_indice)+aux1)}'].font = Font(
-                        name='Arial', size=11, color='000000')
+                    ws[f'{char}{str(int(linha_indice)+aux1)}'].border = Border(top=borda_fina, left=borda_fina, right=borda_fina, bottom=borda_fina)
+                    ws[f'{char}{str(int(linha_indice)+aux1)}'].alignment = Alignment(horizontal='center', vertical='center', wrapText=True)
+                    ws[f'{char}{str(int(linha_indice)+aux1)}'].font = Font(name='Arial', size=11, color='000000')
             else:
                 for aux2 in range(0, 2):
-                    ws[f'{char}{str(int(linha_indice)+aux2)}'].border = Border(
-                        top=borda_fina, bottom=borda_fina)
-                    ws[f'{char}{str(int(linha_indice)+aux2)}'].alignment = Alignment(
-                        horizontal='center', vertical='center', wrapText=True)
-                    ws[f'{char}{str(int(linha_indice)+aux2)}'].font = Font(
-                        name='Arial', size=10, color='000000')
+                    ws[f'{char}{str(int(linha_indice)+aux2)}'].border = Border(top=borda_fina, bottom=borda_fina)
+                    ws[f'{char}{str(int(linha_indice)+aux2)}'].alignment = Alignment(horizontal='center', vertical='center', wrapText=True)
+                    ws[f'{char}{str(int(linha_indice)+aux2)}'].font = Font(name='Arial', size=10, color='000000')
 
 
 def preencher_cabo_mao(wb, nome_planilha, linha, tag_cabo, comprimento, formacao, origem_destino, percurso, rev):
